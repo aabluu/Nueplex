@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Book Tickets | NUEPLEX</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="booking.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="icon" type="image/png" href="images/nueplex-logo.png">
+</head>
+
+<body>
+  <header class="site-header"><a class="brand" href="index.html">NUE<span>PLEX</span></a>
+    <nav><a href="index.html">Home</a><a href="index.html#movies">Movies</a><a href="booking.html">Book Tickets</a><a
+        href="admin.html">Admin</a></nav>
+  </header>
+  <main class="booking-wrap">
+    <p class="eyebrow">YOUR MOVIE NIGHT STARTS HERE</p>
+    <h1>BOOK YOUR <span>SEATS</span></h1>
+    <div class="booking-layout">
+      <section class="booking-panel">
+        <h2>1. Choose your show</h2>
+        <div class="booking-fields"><label>Movie<select id="bookingMovie">
+              <option value="">Select Movie</option>
+            </select></label><label>Branch<select id="bookingBranch">
+              <option>DHA</option>
+              <option>ASKARI IV</option>
+            </select></label><label>Date<input type="date" id="bookingDate"></label><label>Cinema Room<select
+              id="bookingRoom">
+              <option value="1">Room 1</option>
+              <option value="2">Room 2</option>
+              <option value="3">Room 3</option>
+              <option value="4">Room 4</option>
+              <option value="5">Room 5</option>
+              <option value="6">Room 6</option>
+            </select></label></div>
+        <h2>2. Select showtime</h2>
+        <div id="showtimeOptions" class="showtime-options"></div>
+        <h2>3. Select your seats</h2>
+        <div class="screen">SCREEN THIS WAY</div>
+        <div class="seat-legend"><span>Available</span><span>Selected</span><span>Reserved</span></div>
+        <div id="seatGrid" class="seat-grid"></div>
+        <p id="bookingMessage" class="booking-message"></p>
+      </section>
+      <aside class="booking-panel summary">
+        <h2>Booking Summary</h2>
+        <p>Movie <b id="summaryMovie">—</b></p>
+        <p>Branch <b id="summaryBranch">—</b></p>
+<p>Date <b id="summaryDate">—</b></p>
+<p>Time <b id="summaryTime">—</b></p>
+<p>Room <b id="summaryRoom">—</b></p>
+        <p>Seats <b id="summarySeats">—</b></p>
+        <hr>
+        <p class="total">Total <b id="summaryTotal">Rs. 0</b></p><button class="btn full" id="confirmBooking">CONFIRM
+          DEMO BOOKING</button><small>This is a frontend-only demonstration. No payment is processed.</small>
+      </aside>
+    </div>
+    <section class="ticket-confirmation" id="ticketConfirmation" hidden>
+      <p class="eyebrow">BOOKING CONFIRMED</p>
+      <h2>Your demo ticket</h2>
+      <div class="ticket">
+        <h3>NUE<span>PLEX</span></h3>
+        <p>REFERENCE: <b id="ticketReference"></b></p>
+        <p id="ticketMovie"></p>
+        <p id="ticketBranch"></p>
+        <p id="ticketDate"></p>
+        <p id="ticketTime"></p>
+        <p id="ticketRoom"></p>
+        <p id="ticketSeats"></p>
+        <h3 id="ticketTotal"></h3>
+      </div><button class="btn" onclick="window.print()">PRINT TICKET</button><button class="btn secondary"
+        id="newBooking">NEW BOOKING</button>
+    </section>
+  </main>
+  <footer class="site-footer reveal-footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <div class="footer-brand-column">
+        <a class="brand footer-logo" href="index.html">NUE<span>PLEX</span></a>
+        <p class="footer-tagline">Entertainment that brings us together.</p>
+        <p class="footer-description">Big-screen stories, memorable moments and a better way to plan your next movie
+          night.</p>
+        <a class="footer-cta" href="booking.html">BOOK YOUR TICKETS <span>↗</span></a>
+      </div>
+      <div class="footer-links-column">
+        <h3>EXPLORE</h3>
+        <a href="index.html">Home</a>
+        <a href="index.html#movies">Movies</a>
+        <a href="booking.html">Book Tickets</a>
+        <a href="news.html">Nue News</a>
+      </div>
+      <div class="footer-links-column">
+        <h3>INFORMATION</h3>
+        <a href="about.html">About Us</a>
+        <a href="tickets.html">Tickets Info</a>
+        <a href="private-screening.html">Private Screening</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-contact-column">
+        <h3>YOUR NEXT MOVIE NIGHT</h3>
+        <p>Choose your cinema, find a showtime and get ready for the big screen.</p>
+        <div class="footer-socials" aria-label="Quick links">
+          <a href="contact.html" aria-label="Contact NUEPLEX">✉</a>
+          <a href="booking.html" aria-label="Book tickets">▣</a>
+          <a href="index.html#movies" aria-label="Browse movies">▶</a>
+        </div>
+        <span class="footer-location">DHA <i>•</i> ASKARI IV <i>•</i> KARACHI</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="footer-year"></span> NUEPLEX REPLICA. STUDENT DEMO PROJECT.</span>
+      <a href="admin.html">ADMIN DASHBOARD <span>↗</span></a>
+    </div>
+  </footer>
+  <script src="booking.js"></script>
+  <script src="footer.js"></script>
+</body>
+
+</html>

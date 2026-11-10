@@ -1,0 +1,444 @@
+
+/* ==========================================
+   NUEPLEX - BOOKING PAGE
+   Dark Cinema Theme
+========================================== */
+
+.booking-wrap {
+    padding: 65px 6%;
+    max-width: 1450px;
+    margin: auto;
+}
+
+.booking-wrap > h1 {
+    font: 800 38px Manrope, sans-serif;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+.booking-wrap > h1 span {
+    color: var(--gold);
+}
+
+/* Booking Layout */
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1.6fr .8fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.booking-panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 25px;
+    border-radius: 12px;
+    min-width: 0;
+}
+
+.booking-panel h2 {
+    font: 700 16px Manrope, sans-serif;
+    margin: 5px 0 20px;
+}
+
+.booking-panel h2:not(:first-child) {
+    margin-top: 30px;
+}
+
+/* Booking Fields */
+
+.booking-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.booking-fields label {
+    font-size: 11px;
+    color: var(--muted);
+    display: grid;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.booking-fields input,
+.booking-fields select {
+    width: 100%;
+    background: #090909;
+    color: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    padding: 12px;
+    min-width: 0;
+    font: inherit;
+    font-size: 12px;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.booking-fields input:focus,
+.booking-fields select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201, 164, 92, .15);
+}
+
+.booking-fields select option {
+    background: #090909;
+    color: #ffffff;
+}
+
+/* Showtime Options */
+
+.showtime-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.showtime-option {
+    padding: 11px 16px;
+    background: #090909;
+    border: 1px solid #444444;
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.showtime-option:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+.showtime-option.active {
+    background: var(--gold);
+    color: #111111;
+    border-color: var(--gold);
+    box-shadow: 0 4px 14px rgba(201, 164, 92, .2);
+}
+
+/* Cinema Screen */
+
+.screen {
+    margin: 30px auto 25px;
+    width: 80%;
+    text-align: center;
+    padding: 12px;
+    background: linear-gradient(180deg, #555555, #292929);
+    border-radius: 50% 50% 5px 5px;
+    color: #eeeeee;
+    font-size: 9px;
+    letter-spacing: 3px;
+    box-shadow: 0 8px 25px rgba(201, 164, 92, .15);
+}
+
+/* Seat Legend */
+
+.seat-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    color: var(--muted);
+    font-size: 10px;
+    margin-bottom: 18px;
+}
+
+.seat-legend span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.seat-legend span::before {
+    content: "";
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 3px;
+    background: #555555;
+    margin-right: 7px;
+}
+
+.seat-legend span:nth-child(2)::before {
+    background: var(--gold);
+}
+
+.seat-legend span:nth-child(3)::before {
+    background: #a34d4d;
+}
+
+/* Seat Grid */
+
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 9px;
+    max-width: 510px;
+    margin: auto;
+}
+
+.seat {
+    aspect-ratio: 1;
+    background: #383838;
+    color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.seat:not(:disabled):hover {
+    background: #626262;
+    transform: translateY(-2px);
+    border-color: var(--gold);
+}
+
+.seat.selected {
+    background: var(--gold);
+    color: #111111;
+    border-color: var(--gold);
+    box-shadow: 0 3px 12px rgba(201, 164, 92, .25);
+}
+
+.seat.reserved {
+    background: #873f45;
+    color: #ffffff;
+    cursor: not-allowed;
+    opacity: .65;
+}
+
+.seat:focus-visible,
+.showtime-option:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}
+
+/* Booking Messages */
+
+.booking-message {
+    color: #f1a4a4;
+    font-size: 12px;
+    margin-top: 16px;
+    line-height: 1.6;
+    min-height: 16px;
+}
+
+/* Booking Summary */
+
+.summary {
+    position: sticky;
+    top: 110px;
+}
+
+.summary p {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 12px;
+    margin: 19px 0;
+}
+
+.summary b {
+    color: #ffffff;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.summary hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 22px 0;
+}
+
+.summary .total {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.summary .total b {
+    color: var(--gold);
+}
+
+.full {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.summary small {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Disabled Confirmation Button */
+
+#confirmBooking:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    transform: none;
+    filter: grayscale(.3);
+}
+
+/* Ticket Confirmation */
+
+.ticket-confirmation {
+    margin: 45px auto;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.ticket-confirmation h2 {
+    font: 800 27px Manrope, sans-serif;
+}
+
+.ticket {
+    max-width: 420px;
+    margin: 25px auto;
+    padding: 28px;
+    background: #f8f4eb;
+    color: #161616;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .2);
+    border: 1px dashed #bca77e;
+    position: relative;
+}
+
+.ticket h3 {
+    font: 900 25px Manrope, sans-serif;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+}
+
+.ticket h3 span {
+    color: #9a7738;
+}
+
+.ticket p {
+    padding: 11px 0;
+    border-bottom: 1px dashed #bbbbbb;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.ticket #ticketTotal {
+    margin-top: 20px;
+    color: #9a7738;
+    font-size: 21px;
+}
+
+/* Secondary Button */
+
+.secondary {
+    background: #333333;
+    color: #ffffff;
+    margin-left: 8px;
+}
+
+.secondary:hover {
+    background: #555555;
+}
+
+/* Tablet Responsive */
+
+@media (max-width: 850px) {
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .summary {
+        position: static;
+    }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 500px) {
+    .booking-wrap {
+        padding: 40px 5%;
+    }
+
+    .booking-wrap > h1 {
+        font-size: 29px;
+    }
+
+    .booking-panel {
+        padding: 17px;
+    }
+
+    .booking-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .seat-grid {
+        gap: 5px;
+    }
+
+    .seat {
+        font-size: 8px;
+        border-radius: 4px;
+    }
+
+    .seat-legend {
+        gap: 13px;
+        font-size: 9px;
+    }
+
+    .showtime-options {
+        gap: 7px;
+    }
+
+    .showtime-option {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+
+    .ticket {
+        padding: 20px;
+    }
+
+    .secondary {
+        margin: 8px 0 0;
+    }
+}
+
+/* Print Ticket Only */
+
+@media print {
+    body * {
+        visibility: hidden !important;
+    }
+
+    .ticket-confirmation,
+    .ticket-confirmation * {
+        visibility: visible !important;
+    }
+
+    .ticket-confirmation {
+        display: block !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .ticket-confirmation button {
+        display: none !important;
+    }
+
+    .ticket {
+        box-shadow: none;
+        border: 1px dashed #888888;
+    }
+}

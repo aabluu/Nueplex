@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NUEPLEX Cinemas | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="icon" type="image/png" href="images/nueplex-logo.png">
+</head>
+
+<body>
+  <div class="announcement">WELCOME TO NUEPLEX CINEMAS — EXPERIENCE MOVIES DIFFERENTLY</div>
+  <header class="site-header"><a class="brand" href="index.html">NUE<span>PLEX</span></a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav id="mainNav"><a href="index.html">Home</a><a href="#movies">Movies</a><a href="#findShowtime">Show Time</a><a
+        href="news.html">Nue News</a><a href="tickets.html">Tickets Info</a><a href="about.html">About Us</a><a
+        href="private-screening.html">Private Screening</a><a href="contact.html">Contact Us</a><a class="nav-book"
+        href="booking.html">Book Tickets</a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-slide active"
+        style="background-image:linear-gradient(90deg,#0009,#0002),url('https://images.unsplash.com/photo-1489599849927-2ee91 invokes?auto=format&fit=crop&w=1800&q=85')">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">THE CINEMA EXPERIENCE</p>
+        <h1>MAKE EVERY<br><span>MOMENT</span> EPIC.</h1>
+        <p>Big screen entertainment. Unforgettable experiences.</p><a class="btn" href="#movies">Explore Movies</a>
+      </div>
+      <div class="hero-bottom">DHA <span>•</span> ASKARI IV <span>•</span> KARACHI</div>
+    </section>
+    <section class="section" id="movies">
+      <div class="section-heading">
+        <p class="eyebrow">DISCOVER YOUR NEXT MOVIE</p>
+        <h2>NOW SHOWING <span>&amp; MOVIE CATALOGUE</span></h2>
+      </div>
+      <div class="movie-tools">
+        <div class="tabs"><button class="active" data-filter="all">ALL MOVIES</button><button data-filter="now">NOW
+            SHOWING</button><button data-filter="catalogue">CATALOGUE</button></div><input id="movieSearch"
+          placeholder="Search movies..."><select id="genreFilter">
+          <option value="">All Genres</option>
+          <option>Action</option>
+          <option>Adventure</option>
+          <option>Animation</option>
+          <option>Horror</option>
+          <option>Sci-Fi</option>
+        </select>
+      </div>
+      <div class="movie-grid" id="movieGrid"></div>
+      <p id="movieEmpty" class="empty" hidden>No movies match your search.</p>
+    </section>
+    
+<section class="find-showtime" id="findShowtime">
+    <div class="showtime-heading">
+        <span>PLAN YOUR VISIT</span>
+        <h2>FIND A <strong>SHOWTIME</strong></h2>
+    </div>
+
+    <div class="showtime-form">
+
+        <div class="showtime-field">
+            <label for="showBranch">Branch</label>
+            <select id="showBranch">
+                <option value="">Select Branch</option>
+                <option value="ASKARI IV">ASKARI IV</option>
+                <option value="DHA">DHA</option>
+            </select>
+        </div>
+
+        <div class="showtime-field">
+            <label for="showMovie">Movie</label>
+            <select id="showMovie">
+                <option value="">Select Movie</option>
+            </select>
+        </div>
+
+        <div class="showtime-field">
+            <label for="showDate">Date</label>
+            <input type="date" id="showDate">
+        </div>
+
+        <div class="showtime-field">
+            <label for="showRoom">Room</label>
+            <select id="showRoom">
+    <option value="">Select Room</option>
+    <option value="1">Room 1</option>
+    <option value="2">Room 2</option>
+    <option value="3">Room 3</option>
+    <option value="4">Room 4</option>
+    <option value="5">Room 5</option>
+    <option value="6">Room 6</option>
+</select>
+        </div>
+
+        <button type="button" id="findShowtimeBtn">
+            FIND SHOWTIME
+        </button>
+    </div>
+
+    <div id="showtimeResults" class="showtime-results" aria-live="polite"></div>
+</section>
+
+    <section class="section experience">
+      <div>
+        <p class="eyebrow">MORE THAN JUST A MOVIE</p>
+        <h2>THE NUEPLEX<br><span>EXPERIENCE</span></h2>
+        <p>Enjoy immersive cinema, comfortable seating and memorable moments with friends and family.</p>
+      </div>
+      <div class="feature-grid">
+        <article><b>01</b>
+          <h3>Premium Screens</h3>
+          <p>Enjoy movies on the big screen.</p>
+        </article>
+        <article><b>02</b>
+          <h3>Comfortable Seating</h3>
+          <p>Settle in and enjoy the show.</p>
+        </article>
+        <article><b>03</b>
+          <h3>Great Moments</h3>
+          <p>Make every visit memorable.</p>
+        </article>
+        <article><b>04</b>
+          <h3>Easy Booking</h3>
+          <p>Choose your seats online.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer reveal-footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <div class="footer-brand-column">
+        <a class="brand footer-logo" href="index.html">NUE<span>PLEX</span></a>
+        <p class="footer-tagline">Entertainment that brings us together.</p>
+        <p class="footer-description">Big-screen stories, memorable moments and a better way to plan your next movie
+          night.</p>
+        <a class="footer-cta" href="booking.html">BOOK YOUR TICKETS <span>↗</span></a>
+      </div>
+      <div class="footer-links-column">
+        <h3>EXPLORE</h3>
+        <a href="index.html">Home</a>
+        <a href="index.html#movies">Movies</a>
+        <a href="booking.html">Book Tickets</a>
+        <a href="news.html">Nue News</a>
+      </div>
+      <div class="footer-links-column">
+        <h3>INFORMATION</h3>
+        <a href="about.html">About Us</a>
+        <a href="tickets.html">Tickets Info</a>
+        <a href="private-screening.html">Private Screening</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-contact-column">
+        <h3>YOUR NEXT MOVIE NIGHT</h3>
+        <p>Choose your cinema, find a showtime and get ready for the big screen.</p>
+        <div class="footer-socials" aria-label="Quick links">
+          <a href="contact.html" aria-label="Contact NUEPLEX">✉</a>
+          <a href="booking.html" aria-label="Book tickets">▣</a>
+          <a href="index.html#movies" aria-label="Browse movies">▶</a>
+        </div>
+        <span class="footer-location">DHA <i>•</i> ASKARI IV <i>•</i> KARACHI</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="footer-year"></span> NUEPLEX REPLICA. STUDENT DEMO PROJECT.</span>
+      <a href="admin.html">ADMIN DASHBOARD <span>↗</span></a>
+    </div>
+  </footer>
+  <div class="modal" id="movieModal">
+    <div class="modal-card"><button class="modal-x" id="closeModal">×</button><img id="modalImage" alt="">
+      <div>
+        <p class="eyebrow">MOVIE DETAILS</p>
+        <h2 id="modalTitle"></h2>
+        <p id="modalGenre" class="gold"></p>
+        <p id="modalDescription"></p><a class="btn" id="modalBook" href="booking.html">BOOK TICKETS</a>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="footer.js"></script>
+</body>
+
+</html>

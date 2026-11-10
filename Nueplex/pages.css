@@ -1,0 +1,84 @@
+.page-wrap {
+    min-height: 65vh;
+    padding: 85px 8%;
+    max-width: 1300px;
+    margin: auto
+}
+
+.page-wrap h1 {
+    font: 800 clamp(36px, 6vw, 62px) Manrope;
+    margin-bottom: 12px
+}
+
+.page-subtitle {
+    color: #aaa;
+    margin-bottom: 40px
+}
+
+.content-panel {
+    background: #151515;
+    border: 1px solid #303030;
+    padding: 30px;
+    margin-bottom: 18px
+}
+
+.content-panel h2 {
+    font: 700 20px Manrope;
+    margin: 15px 0
+}
+
+.content-panel p,
+.content-panel li {
+    font-size: 13px;
+    color: #bbb;
+    line-height: 1.9;
+    margin: 10px 0
+}
+
+.content-panel ol {
+    padding-left: 20px
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px
+}
+
+.demo-form {
+    display: grid;
+    gap: 15px
+}
+
+.demo-form label {
+    display: grid;
+    gap: 8px;
+    color: #aaa;
+    font-size: 11px
+}
+
+.demo-form input,
+.demo-form textarea {
+    padding: 13px;
+    background: #090909;
+    border: 1px solid #333;
+    color: white
+}
+
+.demo-form textarea {
+    min-height: 110px
+}
+
+@media(max-width:700px) {
+    .content-grid {
+        grid-template-columns: 1fr
+    }
+
+    .page-wrap {
+        padding: 55px 5%
+    }
+
+    .content-panel {
+        padding: 20px
+    }
+}

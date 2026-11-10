@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NUEPLEX Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/nueplex-logo.png">
+</head>
+
+<body class="admin-body">
+    <aside class="admin-sidebar" id="adminSidebar">
+        <a class="brand" href="index.html">NUE<span>PLEX</span></a>
+        <p class="admin-label">ADMIN PANEL</p>
+
+        <nav class="admin-nav">
+            <button class="active" data-section="dashboard">Dashboard</button>
+            <button data-section="movies">Movies</button>
+            <button data-section="showtimes">Showtimes</button>
+            <button data-section="bookings">Bookings</button>
+            <button data-section="settings">Settings</button>
+        </nav>
+
+        <a href="index.html">← Back to website</a>
+    </aside>
+
+    <main class="admin-main">
+        <header class="admin-top">
+            <button id="adminMenuToggle">☰</button>
+            <div>
+                <small>WELCOME BACK</small>
+                <h1 id="pageHeading">Dashboard</h1>
+            </div>
+            <span>● DEMO ADMIN</span>
+        </header>
+
+        <div class="admin-content">
+
+            <section class="admin-section active" id="dashboard">
+                <h2>Overview</h2>
+
+                <div class="stats-grid">
+                    <article><small>Total Movies</small><b id="statMovies">0</b></article>
+                    <article><small>Total Bookings</small><b id="statBookings">0</b></article>
+                    <article><small>Seats Booked</small><b id="statSeats">0</b></article>
+                    <article><small>Demo Revenue</small><b id="statRevenue">Rs. 0</b></article>
+                </div>
+
+                <div class="admin-panel">
+                    <h3>Recent Bookings</h3>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Movie</th>
+                                    <th>Branch</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recentBookings"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="admin-section" id="movies">
+                <div class="section-title-row">
+                    <div>
+                        <h2>Movie Management</h2>
+                        <p>Add, edit and remove catalogue entries.</p>
+                    </div>
+                    <button class="gold-btn" id="addMovieBtn">+ Add Movie</button>
+                </div>
+
+                <div class="admin-panel table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Movie</th>
+                                <th>Genre</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="moviesTable"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="admin-section" id="showtimes">
+                <h2>Showtime Management</h2>
+
+                <div class="admin-panel">
+                    <form id="showtimeForm" class="admin-form">
+
+                        <label>
+                            Branch
+                            <select id="showBranch" required>
+                                <option value="DHA">DHA</option>
+                                <option value="ASKARI IV">ASKARI IV</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Movie
+                            <select id="showMovie" required>
+                                <option value="">Select Movie</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Date
+                            <input type="date" id="showDate" required>
+                        </label>
+
+                        <label>
+                            Room
+                            <select id="showRoom" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Time
+                            <input type="time" id="showTime" required>
+                        </label>
+
+                        <button type="submit" class="gold-btn">Add Showtime</button>
+                    </form>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Branch</th>
+                                    <th>Movie</th>
+                                    <th>Date</th>
+                                    <th>Room</th>
+                                    <th>Time</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="showtimesTable"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="admin-section" id="bookings">
+                <h2>Booking Management</h2>
+
+                <div class="admin-panel table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Reference</th>
+                                <th>Movie</th>
+                                <th>Branch / Room</th>
+                                <th>Date / Time</th>
+                                <th>Seats</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bookingsTable"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="admin-section" id="settings">
+                <h2>Website Settings</h2>
+
+                <div class="admin-panel">
+                    <form id="settingsForm" class="admin-form">
+                        <label>
+                            Demo ticket price (PKR)
+                            <input type="number" min="1" id="ticketPriceInput" required>
+                        </label>
+
+                        <button class="gold-btn">Save Settings</button>
+                    </form>
+
+                    <p class="notice">
+                        This is a browser-only student demo. It does not change the official NUEPLEX
+                        website or create real reservations.
+                    </p>
+
+                    <button class="danger-btn" id="resetDemoData">Reset Demo Data</button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <div class="admin-modal" id="movieAdminModal">
+        <form id="movieForm" class="admin-modal-card">
+            <button type="button" class="modal-close" id="closeMovieModal">×</button>
+
+            <h2 id="movieModalHeading">Add Movie</h2>
+
+            <input type="hidden" id="editMovieId">
+
+            <label>
+                Title
+                <input id="movieTitleInput" required>
+            </label>
+
+            <label>
+                Genre
+                <input id="movieGenreInput" required>
+            </label>
+
+            <label>
+                Poster URL
+                <input
+                    type="text"
+                    id="movieImageInput"
+                    placeholder="images/movie-poster.jpg"
+                    required
+                >
+            </label>
+
+            <label>
+                Description
+                <textarea id="movieDescriptionInput" required></textarea>
+            </label>
+
+            <label>
+                Status
+                <select id="movieStatusInput">
+                    <option value="catalogue">Catalogue</option>
+                    <option value="now">Now Showing</option>
+                </select>
+            </label>
+
+            <button class="gold-btn">Save Movie</button>
+        </form>
+    </div>
+
+    <div id="adminToast"></div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

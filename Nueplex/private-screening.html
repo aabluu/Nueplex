@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PRIVATE SCREENING | NUEPLEX</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="icon" type="image/png" href="images/nueplex-logo.png">
+</head>
+
+<body>
+  <header class="site-header"><a class="brand" href="index.html">NUE<span>PLEX</span></a><button class="menu-toggle"
+      id="menuToggle">☰</button>
+    <nav id="mainNav"><a href="index.html">Home</a><a href="index.html#movies">Movies</a><a href="booking.html">Book
+        Tickets</a><a href="news.html">Nue News</a><a href="tickets.html">Tickets Info</a><a href="about.html">About
+        Us</a><a href="private-screening.html">Private Screening</a><a href="contact.html">Contact Us</a></nav>
+  </header>
+  <main class="page-wrap">
+    <p class="eyebrow">NUEPLEX CINEMAS</p>
+    <h1>PRIVATE SCREENING</h1>
+    <p class="page-subtitle">A sample enquiry page for private cinema events.</p>
+    <div class="content-panel">
+      <form class="demo-form"
+        onsubmit="event.preventDefault();alert('Thank you. This is a demo form and no enquiry was sent.');"><label>Your
+          Name<input required placeholder="Full name"></label><label>Email Address<input type="email" required
+            placeholder="name@example.com"></label><label>Preferred Date<input type="date" required></label><label>Event
+          Details<textarea required placeholder="Tell us about your screening"></textarea></label><button
+          class="btn">SEND DEMO ENQUIRY</button></form>
+    </div>
+  </main>
+  <footer class="site-footer reveal-footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <div class="footer-brand-column">
+        <a class="brand footer-logo" href="index.html">NUE<span>PLEX</span></a>
+        <p class="footer-tagline">Entertainment that brings us together.</p>
+        <p class="footer-description">Big-screen stories, memorable moments and a better way to plan your next movie
+          night.</p>
+        <a class="footer-cta" href="booking.html">BOOK YOUR TICKETS <span>↗</span></a>
+      </div>
+      <div class="footer-links-column">
+        <h3>EXPLORE</h3>
+        <a href="index.html">Home</a>
+        <a href="index.html#movies">Movies</a>
+        <a href="booking.html">Book Tickets</a>
+        <a href="news.html">Nue News</a>
+      </div>
+      <div class="footer-links-column">
+        <h3>INFORMATION</h3>
+        <a href="about.html">About Us</a>
+        <a href="tickets.html">Tickets Info</a>
+        <a href="private-screening.html">Private Screening</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-contact-column">
+        <h3>YOUR NEXT MOVIE NIGHT</h3>
+        <p>Choose your cinema, find a showtime and get ready for the big screen.</p>
+        <div class="footer-socials" aria-label="Quick links">
+          <a href="contact.html" aria-label="Contact NUEPLEX">✉</a>
+          <a href="booking.html" aria-label="Book tickets">▣</a>
+          <a href="index.html#movies" aria-label="Browse movies">▶</a>
+        </div>
+        <span class="footer-location">DHA <i>•</i> ASKARI IV <i>•</i> KARACHI</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="footer-year"></span> NUEPLEX REPLICA. STUDENT DEMO PROJECT.</span>
+      <a href="admin.html">ADMIN DASHBOARD <span>↗</span></a>
+    </div>
+  </footer>
+  <script>document.getElementById('menuToggle')?.addEventListener('click', () => document.getElementById('mainNav').classList.toggle('open'));</script>
+  <script src="footer.js"></script>
+</body>
+
+</html>
